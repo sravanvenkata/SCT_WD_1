@@ -284,13 +284,17 @@ nav {
     .castle-img-slot img { height: 50%; }
 }
 @media (max-width: 768px) {
+    .nav-left {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
     .menu-icon {
         display: block;
-        z-index: 1100;
-        position: relative;
-        top: 0;
-        right: 0;
         margin-left: 12px;
+        position: static;
     }
     nav {
         flex-direction: column;
