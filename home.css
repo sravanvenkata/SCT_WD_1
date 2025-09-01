@@ -57,6 +57,7 @@ nav {
     display: flex;
     align-items: center;
     gap: 18px;
+    position: relative; /* Ensure menu-icon is positioned relative to nav-left */
 }
 #menu-toggle { display: none; }
 .menu-icon {
@@ -286,6 +287,10 @@ nav {
     .menu-icon {
         display: block;
         z-index: 1100;
+        position: relative;
+        top: 0;
+        right: 0;
+        margin-left: 12px;
     }
     nav {
         flex-direction: column;
@@ -299,11 +304,13 @@ nav {
         background: #111;
         padding: 10px;
         position: absolute;
-        top: 50px; right: 10px;
+        top: 60px; 
+        right: 10px;
         border-radius: 8px;
         z-index: 1200;
     }
-    #menu-toggle:checked + .menu-icon + ul {
+    
+    #menu-toggle:checked ~ .items {
         display: flex;
     }
     .items li { margin: 10px 0; }
