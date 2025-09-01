@@ -1,0 +1,351 @@
+body {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    margin: 0;
+    padding: 0;
+    background: #f3e9d2;
+    color: #3b3b3b;
+    line-height: 1.6;
+}
+
+html { scroll-behavior: smooth; }
+
+main { padding-top: 70px; }
+
+section {
+    padding: 50px 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+    border-bottom: 1px solid #c8bda8;
+}
+
+section:last-of-type { border-bottom: none; }
+
+h2 {
+    font-size: 2.8em;
+    margin-bottom: 20px;
+    color: #4a2c2a;
+    font-weight: normal;
+    letter-spacing: 1px;
+}
+
+h3 { font-size: 1.8em; margin: 10px 0; }
+
+p { font-size: 1.1em; max-width: 700px; margin: 0 auto; }
+
+
+/* --- Header & Navigation --- */
+.nav {
+    position: fixed;
+    top: 0; width: 100%;
+    background: rgba(34,34,34,0.7);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    border-bottom: 2px solid #D3A625;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    height: 70px;
+}
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+#menu-toggle { display: none; }
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #fff;
+    z-index: 1100;
+    position: absolute;
+    top: 18px;
+    right: 28px;
+}
+.home {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: 2px;
+    transition: color 0.3s;
+}
+.home:hover { color: #D3A625; }
+.items {
+    list-style: none;
+    display: flex;
+    margin: 0; padding: 0;
+}
+.items li { margin-left: 35px; }
+.items a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: color 0.3s;
+}
+.items a:hover { color: #D3A625; }
+
+
+/* --- Home Section --- */
+.home-bg {
+    background: url('hp_school.png') center center/cover no-repeat;
+    min-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-shadow: 0 2px 8px #222;
+    border-radius: 18px;
+    margin-bottom: 32px;
+    position: relative;
+    background-position: center center;
+    background-size: cover;
+}
+.home-bg p {
+    background: rgba(44, 62, 80, 0.5);
+    padding: 16px 24px;
+    border-radius: 12px;
+    max-width: 700px;
+}
+
+
+/* --- Houses Section --- */
+.houses-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+    text-align: center;
+}
+.house-card {
+    background: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 6px 24px rgba(44,62,80,0.13);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-top: 5px solid;
+}
+.house-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    background: linear-gradient(120deg, #f3e9d2 80%, #e9e0ce 100%);
+}
+.gryffindor { border-color: #740001; }
+.gryffindor h3 { color: #740001; }
+.hufflepuff { border-color: #FFD800; }
+.hufflepuff h3 { color: #60605c; }
+.ravenclaw { border-color: #0E1A40; }
+.ravenclaw h3 { color: #0E1A40; }
+.slytherin { border-color: #1A472A; }
+.slytherin h3 { color: #1A472A; }
+
+
+/* --- Professors Cards --- */
+.professors-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+    text-align: left;
+    padding-bottom: 10px;
+}
+.prof-card {
+    background: linear-gradient(135deg, #23243a 80%, #2c2c2c 100%);
+    color: #ffe066;
+    border-radius: 16px;
+    box-shadow: 0 6px 28px rgba(44,62,80,0.20);
+    padding: 32px 24px 20px 24px;
+    border: 2px solid #d3a625;
+    min-height: 340px;
+    position: relative;
+    transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+    overflow: hidden;
+}
+.prof-card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 8px 32px rgba(44,62,80,0.28);
+    z-index: 2;
+    background: linear-gradient(135deg, #2c2c2c 80%, #23243a 100%);
+}
+.prof-card h3 {
+    font-family: 'Georgia', serif;
+    font-size: 1.5em;
+    color: #ffe066;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+}
+.prof-card p {
+    color: #e9e0ce;
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+.prof-card ul {
+    margin: 12px 0 0 0;
+    padding-left: 20px;
+    color: #ffe066;
+}
+.prof-card ul li {
+    font-size: 1em;
+    margin-bottom: 6px;
+    list-style: disc;
+}
+.prof-card .prof-house {
+    color: #d3a625;
+    font-weight: bold;
+    font-size: 0.95em;
+    display: inline-block;
+    margin: 4px 0 6px 0;
+    padding: 2px 8px;
+    border-radius: 8px;
+    background: #23243a;
+    letter-spacing: 1px;
+}
+.prof-card.gryffindor { border-top: 6px solid #740001; }
+.prof-card.hufflepuff { border-top: 6px solid #FFD800; }
+.prof-card.ravenclaw { border-top: 6px solid #0E1A40; }
+.prof-card.slytherin { border-top: 6px solid #1A472A; }
+
+
+/* --- Castle Gallery 2x2 Grid --- */
+.castle-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 24px;
+    width: 100%;
+    margin: 32px 0 0 0;
+    background: #e9e0ce;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(44,62,80,0.10);
+    overflow: hidden;
+    padding: 24px;
+}
+.castle-img-slot {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(44,62,80,0.08);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    padding: 0;
+    height: 100%;
+}
+.castle-img-slot img {
+    width: 100%;
+    height: 60%;
+    object-fit: cover;
+    border-radius: 12px 12px 0 0;
+    margin: 0;
+    display: block;
+}
+.castle-img-caption {
+    padding: 16px 12px 18px 12px;
+    font-size: 1.08em;
+    color: #4a2c2a;
+    background: #f3e9d2;
+    border-radius: 0 0 12px 12px;
+    width: 100%;
+    box-sizing: border-box;
+    min-height: 80px;
+    text-align: left;
+}
+
+
+/* --- Responsive --- */
+@media (max-width: 900px) {
+    .castle-gallery {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+        width: 100vw;
+        margin: 16px 0 0 0;
+        padding: 8px;
+        gap: 16px;
+        border-radius: 0;
+    }
+    .castle-img-slot {
+        min-height: 220px;
+        height: auto;
+        border-radius: 8px;
+    }
+    .castle-img-slot img { height: 50%; }
+}
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+        z-index: 1100;
+    }
+    nav {
+        flex-direction: column;
+        height: auto;
+        padding: 15px;
+        z-index: 1000;
+    }
+    .items {
+        display: none;
+        flex-direction: column;
+        background: #111;
+        padding: 10px;
+        position: absolute;
+        top: 50px; right: 10px;
+        border-radius: 8px;
+        z-index: 1200;
+    }
+    #menu-toggle:checked + .menu-icon + ul {
+        display: flex;
+    }
+    .items li { margin: 10px 0; }
+    main { padding-top: 70px; }
+    h2 { font-size: clamp(1.6rem, 2.5vw, 2.8rem); }
+    h3 { font-size: clamp(1.2rem, 2vw, 1.8rem); }
+    p  { font-size: clamp(0.9rem, 1.5vw, 1.1rem); }
+    .professors-container {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        padding-bottom: 0;
+    }
+    .prof-card {
+        min-height: 0;
+        padding: 18px 10px;
+    }
+    .home-bg {
+        min-height: 60vh;
+        padding: 16px 0;
+        border-radius: 8px;
+        background-position: center center;
+        background-size: cover;
+        margin-bottom: 18px;
+    }
+    .home-bg p {
+        padding: 10px 8px;
+        border-radius: 8px;
+        max-width: 95vw;
+        font-size: 1em;
+    }
+}
+
+
+/* --- Footer --- */
+footer {
+    background: #23243a;
+    color: #ffe066;
+    padding: 1em 0;
+    text-align: center;
+    font-size: 1em;
+    margin-top: 2em;
+    border-radius: 0 0 12px 12px;
+    letter-spacing: 1px;
+    box-shadow: 0 -2px 8px rgba(44,62,80,0.08);
+}
